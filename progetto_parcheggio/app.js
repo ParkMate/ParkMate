@@ -11,6 +11,10 @@ if(location.protocol=="http:"){
 
 //codice
 
+
+var n=0;
+var original = document.getElementById("veicolo");
+
 function ID(id){
   return document.getElementById(id);
 }
@@ -29,16 +33,20 @@ function apriChiudi(id,aperto,chiuso){
 
 }
 
-function apriChiudiEdit(){
-  let veicoli = ID("riquadro-edit");
 
-  if(veicoli.className === 'visibile'){
-    veicoli.classList.remove('visibile');
-    veicoli.classList.add('non-visibile');
-  }
-  else if(veicoli.className === 'non-visibile'){
-    veicoli.classList.remove('non-visibile');
-    veicoli.classList.add('visibile');
-  }
 
+function addVehicles(){
+  let veicolo = document.getElementsByClassName("veicolo");
+  let veicoli = document.getElementById("veicoli");
+  let divClone = veicolo[0].cloneNode(true);
+  veicoli.appendChild(divClone);
 }
+
+function getPos() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
