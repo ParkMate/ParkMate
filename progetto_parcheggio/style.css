@@ -1,0 +1,233 @@
+
+*{
+  box-sizing: border-box;
+}
+
+
+
+/*div principale pagina*/
+
+
+/*div logo*/
+#logo{
+  height: 15rem;
+  width:80%;
+  margin:2rem auto;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px #333333;
+  border:solid 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.1rem);
+}
+
+/*logo*/
+#titolo{
+  width: 15rem;
+  height: 15rem;
+}
+
+
+
+/*-------------------------------------------------------------*/
+#contenuto{
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  overflow-y: auto;
+  z-index:2;
+}
+
+#riquadro-edit{
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background-color: rgba(3, 52, 109, 0.8);
+  z-index: 9393;
+}
+
+#riquadro{
+  position:fixed;
+  top:2rem;
+  right:30rem;
+  left:30rem;
+  bottom:2rem;
+  border-radius:3rem;
+  background-color: #6bbbe0;
+  box-shadow: 0.3rem 0.2rem 1rem rgb(0, 153, 255);
+}
+
+
+#riquadro-edit{
+  opacity:1;
+  transition: opacity 0.4s;
+}
+
+#riquadro-edi\t.visibile{
+  opacity: 1;
+}
+#riquadro-edit.non-visibile{
+  opacity: 0;
+  z-index:-1;
+}
+
+/* body*/
+body{
+  background:url('img/sfondo25fps.gif');
+  background-size: cover;
+
+}
+
+@media all and (max-width: 300px){
+}
+
+
+#row{
+  display: flex;
+  justify-content: space-between;
+  width:90%;
+  height: 10rem;
+  padding:2rem;
+  margin:0 auto;
+}
+
+#row *{
+  margin-top: 10px;
+}
+
+h2{
+  color: white;
+}
+
+/*----------------- pulsante aggiungi ------------------------*/
+#aggiungi{
+  border-radius:3rem;
+  border:none;
+  background:linear-gradient(90deg, #6bbbe0,#4f29fc);
+  height: 2rem;
+  width:6.5rem;
+  font-size: 1.5rem;
+  color:white;
+  padding: 0;
+}
+
+#aggiungi:hover{
+  background-color: rgb(117, 117, 145);
+}
+
+#freccia{
+  color: white;
+  text-align: center;
+  width:3.125rem;
+  height:3.125rem;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+  margin-bottom:0.5rem;
+  margin-left: 80%;
+  font-size: 2rem;
+}
+
+#freccia p{
+  float:center;
+}
+
+#arrow{
+  width:3rem;
+  height:3rem;
+
+}
+
+#veicoli{
+  width:90%;
+  margin:0 auto;
+  padding: 2rem;
+  max-height: 10rem;
+  transition: max-height 0.4s;
+
+}
+
+#veicoli *{
+  transition: opacity 0.4s;
+}
+
+#veicoli.close{
+  max-height:3rem;
+  overflow-y:hidden;
+}
+
+#veicoli.close *{
+  opacity:0;
+}
+
+#veicoli.open{
+  max-height: 10rem;
+}
+
+#veicoli.open *{
+  opacity:1;
+}
+
+
+.veicolo{
+  border-radius: 3rem;
+  border: solid 0.1px black;
+  background-color: rgba(19, 18, 18, 0.8);
+  backdrop-filter: blur(0.1rem);
+  padding:1rem;
+  box-shadow: 0 0 30px black;
+  margin-top:1rem;
+}
+
+
+
+.first-row{
+  color:white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-row p{
+  margin: 0;
+}
+
+.first-row img{
+  margin:0;
+  width:1rem;
+  height:1rem;
+}
+
+.first-row p{
+  width:4rem;
+}
+
+.second-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10%;
+}
+
+.second-row .position img{
+
+  width: 20rem;
+  height: 20rem;
+  border-radius: 2rem;
+}
+
+.second-row-button{
+  border-radius:1rem;
+  border:none;
+  background:linear-gradient(110deg, #3886aa,#1068bb,#4f29fc);
+  width:4rem;
+  height: 4rem;
+  color:white;
+  box-shadow: 0.3rem 0.2rem 1rem black;
+}
+
+#pulsanti{
+  text-align: center;
+}
+
+
+
+
