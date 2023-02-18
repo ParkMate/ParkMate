@@ -32,40 +32,44 @@
 
 
 /*-------------------------------------------------------------*/
-
-/*div della lista dei veicoli*/
-#contenitore{
-  border-radius: 1rem;
-  width:80%;
+#contenuto{
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
   overflow-y: auto;
-  background-color: rgb(82, 159, 223);
-  box-shadow: inset 0 0 30px black;
-  margin: 0 auto;
-  padding:1rem;
-  transition:max-height 0.4s;
+  z-index:2;
 }
 
-#contenitore *{
+#riquadro-edit{
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background-color: rgba(3, 52, 109, 0.8);
+  z-index: 9393;
+}
+
+#riquadro{
+  position:fixed;
+  top:2rem;
+  right:30rem;
+  left:30rem;
+  bottom:2rem;
+  border-radius:3rem;
+  background-color: #6bbbe0;
+  box-shadow: 0.3rem 0.2rem 1rem rgb(0, 153, 255);
+}
+
+
+#riquadro-edit{
+  opacity:1;
   transition: opacity 0.4s;
 }
 
-#contenitore.chiuso{
-  max-height:3rem;
-  overflow-y:hidden;
+#riquadro-edi\t.visibile{
+  opacity: 1;
 }
-
-#contenitore.chiuso *{
-  opacity:0;
+#riquadro-edit.non-visibile{
+  opacity: 0;
+  z-index:-1;
 }
-
-#contenitore.aperto{
-  max-height: 10rem;
-}
-
-#contenitore.aperto *{
-  opacity:1;
-}
-
 
 /* body*/
 body{
@@ -112,7 +116,6 @@ h2{
 }
 
 #freccia{
-  border:solid red 1px;
   color: white;
   text-align: center;
   width:3.125rem;
@@ -121,6 +124,7 @@ h2{
   margin-top: 0.5rem;
   margin-bottom:0.5rem;
   margin-left: 80%;
+  font-size: 2rem;
 }
 
 #freccia p{
@@ -138,7 +142,7 @@ h2{
   margin:0 auto;
   padding: 2rem;
   max-height: 10rem;
-  transition:max-height 0.4s;
+  transition: max-height 0.4s;
 
 }
 
@@ -151,12 +155,17 @@ h2{
   overflow-y:hidden;
 }
 
-
-
-#veicoli.open{
-  max-height: 20rem;
+#veicoli.close *{
+  opacity:0;
 }
 
+#veicoli.open{
+  max-height: 10rem;
+}
+
+#veicoli.open *{
+  opacity:1;
+}
 
 
 .veicolo{
@@ -165,6 +174,8 @@ h2{
   background-color: rgba(19, 18, 18, 0.8);
   backdrop-filter: blur(0.1rem);
   padding:1rem;
+  box-shadow: 0 0 30px black;
+  margin-top:1rem;
 }
 
 
@@ -211,6 +222,10 @@ h2{
   height: 4rem;
   color:white;
   box-shadow: 0.3rem 0.2rem 1rem black;
+}
+
+#pulsanti{
+  text-align: center;
 }
 
 
