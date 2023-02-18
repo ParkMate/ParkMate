@@ -11,7 +11,6 @@ if(location.protocol=="http:"){
 
 //codice
 
-
 var n=0;
 var original = document.getElementById("veicolo");
 
@@ -19,22 +18,19 @@ function ID(id){
   return document.getElementById(id);
 }
 
-function apriChiudi(id,aperto,chiuso){
-  let veicoli = ID(id);
+function apriChiudi(){
+  let veicoli = ID("veicoli");
 
-  if(veicoli.className === aperto){
-    veicoli.classList.remove(aperto);
-    veicoli.classList.add(chiuso);
+  if(veicoli.className === 'open'){
+    veicoli.classList.remove('open');
+    veicoli.classList.add('close');
   }
-  else if(veicoli.className === chiuso){
-    veicoli.classList.remove(chiuso);
-    veicoli.classList.add(aperto);
+  else if(veicoli.className === 'close'){
+    veicoli.classList.remove('close');
+    veicoli.classList.add('open');
   }
 
 }
-
-
-
 function addVehicles(){
   let veicolo = document.getElementsByClassName("veicolo");
   let veicoli = document.getElementById("veicoli");
@@ -49,4 +45,3 @@ function getPos() {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
-
