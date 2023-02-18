@@ -18,7 +18,7 @@
       </div>
       <div id="row">
           <h2>Vehicles</h2>
-          <button id="aggiungi">Add</button>
+          <button id="aggiungi" onclick="addVehicles()">Add</button>
       </div>
       <div id="freccia">
         <p onclick="apriChiudi('veicoli','open','close')">&#709;</p>
@@ -31,10 +31,10 @@
 
           <div class="first-row">
             <div class="history">
-              <img src="img/CRONOLOGIA.png" alt="">
+              <img src="img/CRONOLOGIA.png" alt="" onclick="apriChiudi('riquadro','visibile','non-visibile')">
             </div>
             <div class="edit">
-              <label for="edit">Edit </label><img src="img/EDITNAME.png" alt="" id="edit" onclick="apriChiudi('riquadro-edit','visibile','non-visibile')">
+              <label for="edit">Edit </label><img src="img/EDITNAME.png" alt="" id="edit" onclick="apriChiudi('riquadro','visibile','non-visibile')">
             </div>
             <div class="share">
               <img src="img/share.png" alt="">
@@ -72,10 +72,10 @@
 
           <div class="first-row">
             <div class="history">
-              <img src="img/CRONOLOGIA.png" alt="">
+              <img src="img/CRONOLOGIA.png" alt="" onclick="apriChiudi('riquadro','visibile','non-visibile')">
             </div>
             <div class="edit">
-              <label for="edit">Edit </label><img src="img/EDITNAME.png" alt="" id="edit" onclick="apriChiudi('riquadro-edit','visibile','non-visibile')">
+              <label for="edit">Edit </label><img src="img/EDITNAME.png" alt="" id="edit" onclick="apriChiudi('riquadro','visibile','non-visibile')">
             </div>
             <div class="share">
               <img src="img/SHARE.png" alt="share">
@@ -112,12 +112,10 @@
 
       </div>
     </div>
-    <div id="riquadro-edit" class="visibile">
-      <div id="riquadro">
-        <div id="pulsanti">
-          <button id="exit" onclick="apriChiudi('riquadro-edit','visibile','non-visibile')">EXIT</button>
-          <button id="modifica">CONFIRM</button>
-        </div>
+    <div id="riquadro" class="visibile">
+      <div id="pulsanti">
+        <button id="exit" onclick="apriChiudi('riquadro','visibile','non-visibile')">EXIT</button>
+        <button id="modifica">CONFIRM</button>
       </div>
     </div>
   </body>

@@ -10,6 +10,7 @@ if(location.protocol=="http:"){
 
 
 //codice
+
 var n=0;
 var original = document.getElementById("veicolo");
 
