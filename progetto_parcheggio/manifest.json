@@ -12,6 +12,6 @@
         }
     ],
     "start_url": "index.html",
-    "scope": "/conte/parkMate/",
+    "scope": "/ProgettoConteYassinColombi/ParkMate/",
     "display": "standalone"
 }
