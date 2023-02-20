@@ -18,7 +18,7 @@
       </div>
       <div id="row">
           <h2>Vehicles</h2>
-          <button id="aggiungi" onclick="addVehicles()">Add</button>
+          <label for="aggiungi" id="label-add">click add for add a veichle (test lable)</label><button id="aggiungi" onclick="addVehicles()">Add</button>
       </div>
       <div id="freccia">
         <p onclick="apriChiudi('veicoli','open','close')">&#709;</p>
@@ -34,7 +34,7 @@
               <img src="img/CRONOLOGIA.png" alt="" onclick="apriChiudi('riquadro','visibile','non-visibile')">
             </div>
             <div class="edit">
-              <label for="edit">Edit </label><img src="img/EDITNAME.png" alt="" id="edit" onclick="apriChiudi('riquadro','visibile','non-visibile')">
+              <label for="edit">Edit </label><img src="img/EDITNAME.png" alt="" id="edit">
             </div>
             <div class="share">
               <img src="img/share.png" alt="">
@@ -64,8 +64,8 @@
     </div>
     <div id="riquadro" class="visibile">
       <div id="pulsanti">
+        <p>questa sarà la pagina per la history</p>
         <button id="exit" onclick="apriChiudi('riquadro','visibile','non-visibile')">EXIT</button>
-        <button id="modifica">CONFIRM</button>
       </div>
     </div>
   </body>
