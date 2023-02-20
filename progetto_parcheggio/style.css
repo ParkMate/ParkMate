@@ -353,6 +353,14 @@ h2{
   text-align: center;
 }
 
+#nascosto{
+  display: none;
+}
+
+.map{
+  color:white;
+}
+
 
 
 

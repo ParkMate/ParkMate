@@ -1,4 +1,4 @@
-//Register PWA service worker
+/*//Register PWA service worker
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js');
 }
@@ -6,7 +6,7 @@ if ('serviceWorker' in navigator) {
 //Redirect HTTP to HTTPS
 if(location.protocol=="http:"){
   location.href="https"+location.href.substring(4);
-}
+}*/
 
 
 //codice
@@ -39,14 +39,20 @@ function addVehicles(){
   let veicolo = document.getElementsByClassName("veicolo");
   let veicoli = document.getElementById("veicoli");
   let divClone = veicolo[0].cloneNode(true);
+  divClone.id="";
+  let nodo = divClone.childNodes;
+  let second = nodo[3].childNodes;
+  let reload = second[1].childNodes;
+  reload[1].id = ++n;
   veicoli.appendChild(divClone);
 }
 
-function getPos() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+function getPos(id){
+  map = document.getElementsByClassName("map");
+  navigator.geolocation.getCurrentPosition(position =>{
+    const {latitude, longitude} = position.coords;
+    map[Number(id)].innerText="";
+    map[Number(id)].innerHTML = '<iframe  src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>';
+  });
 }
 
