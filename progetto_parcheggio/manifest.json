@@ -1,0 +1,17 @@
+{
+    "name": "ParkMate",
+    "short_name": "PM",
+    "id": "parkmate",
+    "description": "PWA to park you auto easily",
+    "icons": [
+        {
+            "src": "pwaicon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "start_url": "index.html",
+    "scope": "/conte/parkMate/",
+    "display": "standalone"
+}
