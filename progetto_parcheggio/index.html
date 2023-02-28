@@ -16,13 +16,17 @@
       <div id="logo">
         <img src="img/ridimensionanto.gif" alt="" id="titolo">
       </div>
-      <div id="row">
+      <div id="row-principale">
+        <div id="row">
           <h2>Vehicles</h2>
           click add for add a veichle (test lable)
           <button id="aggiungi" onclick="addVehicles()">Add</button>
-      </div>
-      <div id="freccia">
-        <p onclick="apriChiudi('veicoli','open','close')">&#709;</p>
+        </div>
+        <div id="freccia">
+          <lable onclick="apriChiudi('veicoli','open','close')">
+            &#709;
+          </lable>
+        </div>
       </div>
       <div id="veicoli" class="open">
 
@@ -56,6 +60,13 @@
           </div>
 
 
+          <div class="third-row">
+            <div class="delete">
+              <img src="img/ELIMINA.png" alt="delete" class="cestino" >
+            </div>
+          </div>
+
+
         </div>
         <!--------------------->
         <!--------------------->
@@ -63,9 +74,11 @@
 
       </div>
     </div>
-    <div id="riquadro" class="visibile">
+    <div id="riquadro" class="non-visibile">
+      <p>history</p>
+      <div class="precedenti">
+      </div>
       <div id="pulsanti">
-        <p>questa sarà la pagina per la history</p>
         <button id="exit" onclick="apriChiudi('riquadro','visibile','non-visibile')">exit</button>
       </div>
     </div>
